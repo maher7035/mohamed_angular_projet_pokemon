@@ -1,0 +1,9 @@
+
+
+
+.card {
+    width: 300px;
+    margin: auto;
+    margin-top: 20px;
+    background-color: $red;
+}

@@ -1,0 +1,26 @@
+<mat-card class="card">
+  
+    <mat-card-header>
+      <img mat-card-avatar class="header-image" src="{{urlImg}}">
+      <mat-card-title>{{pokemonName}}</mat-card-title>
+    </mat-card-header>
+  
+    <img mat-card-image src="{{urlImg}}" alt="pokemon">
+  
+    <mat-card-content>
+      <ng-container>
+        Type: {{pokemonType}}
+    </ng-container>
+    </mat-card-content>
+    <ng-container *ngIf="pokemonEvolutionName.length">
+        <mat-card-content  *ngFor="let pok of pokemonEvolutionName">
+      <button  style="background-color: rgb(255, 0, 170);width: 200px;height: 40px" (click)="goToPokemonEvolution(pok.name)">
+        Evolution: {{ pok.name}}  
+     </button> 
+    </mat-card-content>
+    
+    </ng-container> 
+
+ 
+  
+  </mat-card>
